@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Epoches</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Time</th>
+      <th>Device</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @epoches.each do |epoch| %>
+      <tr>
+        <td><%= epoch.time %></td>
+        <td><%= epoch.device %></td>
+        <td><%= link_to 'Show', epoch %></td>
+        <td><%= link_to 'Edit', edit_epoch_path(epoch) %></td>
+        <td><%= link_to 'Destroy', epoch, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Epoch', new_epoch_path %>

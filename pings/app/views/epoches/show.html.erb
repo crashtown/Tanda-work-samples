@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Time:</strong>
+  <%= @epoch.time %>
+</p>
+
+<p>
+  <strong>Device:</strong>
+  <%= @epoch.device %>
+</p>
+
+<%= link_to 'Edit', edit_epoch_path(@epoch) %> |
+<%= link_to 'Back', epoches_path %>
